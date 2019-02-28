@@ -1,10 +1,15 @@
 import baseTable from './table.template';
-import orders from '../../data/orders.json';
+import info_orders from '../../data/orders.json';
+import info_users from '../../data/users.json';
 import Orders from '../orders/orders';
+import checkID from './checkID';
 
-const infoOrders = orders.map((item) => {
-  const order = new Orders(item.id, item.transaction_id, item.created_at, item.user_id, item.total, item.card_type, item.card_number, item.order_country, item.order_ip)
+const all_info = info_orders.map((item_order) => {
+  const order = new Orders(item_order)
+  checkID(info_users, order)
   return order.fullInfo()
 })
 
-export default baseTable(infoOrders) 
+
+
+export default baseTable(all_info) 
