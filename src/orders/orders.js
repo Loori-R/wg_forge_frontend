@@ -1,13 +1,13 @@
 export default class Orders {
-  constructor(id, transaction_id, created_at, user_id, total, card_type, card_number, order_country, order_ip) {
-    this.id = id;
-    this.transaction_id = transaction_id;
-    this.user_info = user_id;
-    this.order_date = created_at;
-    this.order_amount = total;
-    this.card_number = card_number;
-    this.card_type = card_type;
-    this.location = `${order_country} (${order_ip})`;
+  constructor(order_obj) {
+    this.id = order_obj.id;
+    this.transaction_id = order_obj.transaction_id;
+    this.user_id = order_obj.user_id;
+    this.order_date = order_obj.created_at;
+    this.order_amount = order_obj.total;
+    this.card_number = order_obj.card_number;
+    this.card_type = order_obj.card_type;
+    this.location = `${order_obj.order_country} (${order_obj.order_ip})`;
   }
 
   hideCardNum(str) {
@@ -24,11 +24,13 @@ export default class Orders {
     return (format_date.toLocaleString("en-GB", options).toUpperCase())
   }
 
+  userInfo(user) { this.user_id = user.fullInfo() }
+
   fullInfo() {
     return `
     <tr id="${this.id}">
       <td>${this.transaction_id}</td>
-      <td class="user_data">${this.user_info}</td>
+      <td class="user_data">${this.user_id}</td>
       <td>${this.convertDate(this.order_date)}</td>
       <td>$ ${this.order_amount}</td>
       <td>${this.hideCardNum(this.card_number)}</td>
