@@ -1,4 +1,4 @@
-// this is an example of improting data from JSON
+import './index.css'
 import ready from './table/table'
 
 export default (function () {
