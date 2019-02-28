@@ -18,7 +18,7 @@ export default class Orders {
   }
 
   convertDate(date) {
-    if (!date) { return 'N/A' }
+    if (!date) { return 'n/a' }
     const format_date = new Date(date * 1000)
     const options = { hour12: true }
     return (format_date.toLocaleString("en-GB", options).toUpperCase())
