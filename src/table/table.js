@@ -3,6 +3,7 @@ import info_orders from '../../data/orders.json';
 import info_users from '../../data/users.json';
 import Orders from '../orders/orders';
 import checkID from './checkID';
+import './index.css'
 
 const all_info = info_orders.map((item_order) => {
   const order = new Orders(item_order)
