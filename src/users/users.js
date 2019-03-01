@@ -1,5 +1,4 @@
 import companies from '../../data/companies'
-import show_hide from './event'
 
 export default class Users {
   constructor(user_obj) {
@@ -19,7 +18,7 @@ export default class Users {
   }
 
   checkCompany() {
-    const res = companies.find(item => item.id === this.company_id);
+    const res = _.find(companies, (item) => { return item.id === this.company_id });
     if (!res) {
       const err = { full: '' }
       return err
@@ -29,19 +28,7 @@ export default class Users {
     return res
   }
 
-  listener() {
-    window.onload = () => {
-      const elem = document.querySelectorAll('.user-name')
-      elem.forEach((item) => {
-        item.style.pointerEvents = 'auto';
-        item.addEventListener('click', (e) => { show_hide(e) })
-      })
-
-    }
-  }
-
   fullInfo() {
-    this.listener()
     return (`<a href="#" class="user-name">${this.gender} ${this.name}</a>
     <div class="user-details">
             <p>Birthday:${this.convertDate(this.birthday)}</p>

@@ -10,4 +10,13 @@ const show_hide = (e) => {
   }
 }
 
-export default show_hide
+const userNameEvent = () => {
+  const elem = document.querySelectorAll('.user-name')
+  _.map(elem, (item) => {
+    item.style.pointerEvents = 'auto';
+    item.addEventListener('click', (e) => { show_hide(e) })
+  })
+}
+
+
+export default userNameEvent
