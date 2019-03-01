@@ -18,7 +18,14 @@ const sorter = (callback) => {
           const name = _.join(_.slice(fullname, 4))
           return name
         }]);
-        break
+        break;
+      case 3:
+        res = _.sortBy(rows, [(item) => {
+          const arr = _.slice(item.cells[col].textContent, 2)
+          const num = parseFloat(_.join(arr, ''))
+          return num
+        }]);
+        break;
       default:
         res = _.sortBy(rows, [(item) => {
           return item.cells[col].textContent
