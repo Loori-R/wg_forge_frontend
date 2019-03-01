@@ -6,6 +6,12 @@ table {
 }
 
 th{
+  cursor: default;
+  user-select: none;
+  -moz-user-select:none;
+}
+
+th:not(:nth-child(5)){
   cursor: pointer;
 }
 
