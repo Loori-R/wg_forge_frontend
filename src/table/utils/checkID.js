@@ -1,4 +1,4 @@
-import Users from '../users/users';
+import Users from '../../users/users';
 
 const checkID = (info_users, order) => {
   info_users.map((item_user) => {
