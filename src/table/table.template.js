@@ -12,7 +12,7 @@ const baseTable = (info) => `
     </tr>
   </thead>
   <tbody>
-    ${info.join("")}
+    ${_.join(info, "")}
   </tbody>
 </table>`;
 
