@@ -1,4 +1,5 @@
 import companies from '../../data/companies'
+import show_hide from './event'
 
 export default class Users {
   constructor(user_obj) {
@@ -28,8 +29,20 @@ export default class Users {
     return res
   }
 
+  listener() {
+    window.onload = () => {
+      const elem = document.querySelectorAll('.user-name')
+      elem.forEach((item) => {
+        item.style.pointerEvents = 'auto';
+        item.addEventListener('click', (e) => { show_hide(e) })
+      })
+
+    }
+  }
+
   fullInfo() {
-    return (`<a href="#">${this.gender} ${this.name}</a>
+    this.listener()
+    return (`<a href="#" class="user-name">${this.gender} ${this.name}</a>
     <div class="user-details">
             <p>Birthday:${this.convertDate(this.birthday)}</p>
             <p><img src="${this.avatar}" width="100px"></p>

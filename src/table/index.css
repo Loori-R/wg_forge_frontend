@@ -1,6 +1,7 @@
 
 table {
-  min-width: 100%;
+  width: 80%;
+  margin: 50px auto;
   border-collapse: collapse;
 }
 
@@ -11,5 +12,16 @@ th{
 th,td {
   padding: 10px;
   text-align: center;
-  border: 1px solid
+  vertical-align: baseline;
+  border: 1px solid;
+}
+
+.user-name{
+  pointer-events: none;
+}
+
+.user-details{
+  height: 0;
+  overflow: hidden;
+  transition: all 500ms linear;
 }
