@@ -1,4 +1,5 @@
-const baseTable = (info) => `
+const table_template = (main) => `
+<a href=#stats>Statistic</a>
 <table>
   <thead>
     <tr>
@@ -12,8 +13,8 @@ const baseTable = (info) => `
     </tr>
   </thead>
   <tbody>
-    ${_.join(info, "")}
+    ${_.join(main, "")}
   </tbody>
 </table>`;
 
-export default baseTable
+export default table_template

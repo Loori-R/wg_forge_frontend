@@ -10,7 +10,7 @@ const show_hide = (e) => {
   }
 }
 
-const userNameEvent = () => {
+const name_event = () => {
   const elem = document.querySelectorAll('.user-name')
   _.map(elem, (item) => {
     item.style.pointerEvents = 'auto';
@@ -19,4 +19,4 @@ const userNameEvent = () => {
 }
 
 
-export default userNameEvent
+export default name_event
