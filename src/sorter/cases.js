@@ -22,7 +22,7 @@ const cases = (col, rows) => {
             res = _.sortBy(rows, (item) => { return item.cells[col].textContent });
             break;
     }
-    const rows = _.map(res, (item) => { return item.outerHTML })
-    return _.join(rows, '')
+    const row = _.map(res, (item) => { return item.outerHTML })
+    return _.join(row, '')
 }
 export default cases
