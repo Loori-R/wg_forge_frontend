@@ -1,10 +1,14 @@
 const table_template = (main) => `
-<a href=#stats>Statistic</a>
 <table>
   <thead>
     <tr>
       <th>Search:</th>
       <th><input type="text" id="search" disabled autofocus></th>
+      <th colspan='5' id='currency_converter'>
+      <button value='USD'>USD</button>
+      <button value='EUR'>EUR</button>      
+      <button value='CNY'>CNY</button>
+      <button value='RUB'>RUB</button></th>
     </tr>
     <tr>
       <th>Transaction ID</th>
