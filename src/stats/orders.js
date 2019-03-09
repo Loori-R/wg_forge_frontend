@@ -1,8 +1,8 @@
 const result_html = (obj) => {
     const result_td = {}
     _.map(obj, (item, index) => {
-        if (index !== 'orders_count') { item = `$ ${item}` }
         if (item <= 0 || isNaN(item)) { item = 'n/a' }
+        else if (index !== 'orders_count') { item = `$ ${item}` }
         result_td[index] = `<td colspan=6>${item}</td>`
     })
     return result_td
