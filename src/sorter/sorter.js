@@ -6,7 +6,7 @@ const sorter = (callback) => {
     const target = e.target
     //table elements
     const tbody = table.children[1]
-    const theads = table.children[0].children[0].cells //table>thead>tr>th
+    const theads = table.children[0].children[1].cells //table>thead>tr>th
     const rows = tbody.children //table>tbody>tr>th    
     const col = target.cellIndex
     //prevent event

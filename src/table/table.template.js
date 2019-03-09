@@ -3,6 +3,10 @@ const table_template = (main) => `
 <table>
   <thead>
     <tr>
+      <th>Search:</th>
+      <th><input type="text" id="search" disabled autofocus></th>
+    </tr>
+    <tr>
       <th>Transaction ID</th>
       <th>User Info</th>
       <th>Order Date</th>
