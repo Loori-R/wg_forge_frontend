@@ -7,11 +7,15 @@ const sorter = (callback) => {
     //table elements
     const tbody = table.children[1]
     const theads = table.children[0].children[1].cells //table>thead>tr>th
-    const rows = tbody.children //table>tbody>tr>th    
+    const rows = tbody.children //table>tbody>tr   
     const col = target.cellIndex
     //prevent event
-    const prevent = target.nodeName !== 'TH' || col === 4 || target.children.length > 0 || target.id === 'stats'
-    if (prevent) return
+    const nothing = _.some(rows, ['cells.length', 1])
+    const has_arrow = target.children.length > 0
+    const card_num = col === 4
+    const stats = target.id === 'stats'
+    const tag = target.nodeName !== 'TH'
+    if (nothing || has_arrow || card_num || stats || tag) return
     //reset arrow for sorted th
     const activeTH = _.filter(theads, ['children.length', 1])
     _.map(activeTH, (item) => { item.lastChild.remove() })
