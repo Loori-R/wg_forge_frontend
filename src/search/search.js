@@ -8,11 +8,11 @@ const search = (stats) => {
     function searching() {
         const reg = new RegExp(input.value, 'i')
         _.map(rows, (item) => {
-            (reg.test(item.textContent)) ? item.style.display = '' : item.style.display = 'none'
+            if (reg.test(item.textContent)) { item.style.display = '' }
+            else if (item.cells.length === 1) { item.remove() }
+            else { item.style.display = 'none' }
         })
-        if (_.every(rows, ['style.display', 'none'])) {
-            tbody.innerHTML += nothing
-        }
+        if (_.every(rows, ['style.display', 'none'])) { tbody.innerHTML += nothing }
         stats()
     }
     input.addEventListener('keyup', searching)
