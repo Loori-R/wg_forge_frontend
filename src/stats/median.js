@@ -5,7 +5,7 @@ const calc_median = (array) => {
         const first = (length / 2) - 1
         const second = (first + 1)
         const index_median = (arr_sorted[first] + arr_sorted[second]) / 2
-        return index_median
+        return _.ceil(index_median, 2)
     } else {
         const index_median = _.ceil(length / 2) - 1
         return arr_sorted[index_median]
