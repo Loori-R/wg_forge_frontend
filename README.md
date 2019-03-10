@@ -1,3 +1,5 @@
+### [DEMO](https://loori-r.github.io/wg_forge_frontend/)
+
 # Тестовое задание WG Forge Platform Front-End
 
 Это стартовый проект для выполнения тестового задания программы WG Forge Platform Front-End, на основе которого вам нужно выполнять задание.

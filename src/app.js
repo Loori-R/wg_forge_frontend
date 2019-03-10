@@ -1,8 +1,7 @@
-// this is an example of improting data from JSON
-import 'orders' from '../data/orders.json';
+import './index.css'
+import _ from 'lodash'
+import ready from './table/table'
 
 export default (function () {
-    // YOUR CODE GOES HERE
-    // next line is for example only
-    document.getElementById("app").innerHTML = "<h1>Hello WG Forge</h1>";
+    document.getElementById("app").innerHTML = ready;
 }());

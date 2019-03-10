@@ -1,0 +1,62 @@
+
+table {
+  width: 100%;
+  margin: 50px 0;
+  border-collapse: collapse;
+}
+
+th{
+  cursor: default;
+  user-select: none;
+  -moz-user-select:none;
+}
+
+th:not(:nth-child(5)){
+  cursor: pointer;
+}
+
+th,td {
+  padding: 10px;
+  text-align: center;
+  vertical-align: baseline;
+  border: 1px solid #B4AEAE;
+}
+
+a,
+.user-name:active,
+.user-name:link,
+.user-name:visited{
+  color:#000;
+  text-decoration: none;
+  transition: all 200ms linear;
+}
+
+a:hover,
+.user-name:hover{
+  border-bottom: 1px solid #000;
+}
+
+.user-name{
+  pointer-events: none;
+}
+
+.user-details{
+  height: 0;
+  overflow: hidden;
+  transition: all 500ms linear;
+}
+
+thead>tr:first-child>th{
+  border: none;}
+
+
+button,input{
+ pointer-events:all;
+}
+
+input{
+  width: 100%;
+  height: 100%;
+}
+
+button{padding: 0 10px;}
