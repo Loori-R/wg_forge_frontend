@@ -4,11 +4,16 @@ const table_template = (main) => `
     <tr>
       <th>Search:</th>
       <th><input type="text" id="search" disabled autofocus></th>
-      <th colspan='5' id='currency_converter'>
+      <th></th>
+      <th colspan='2' id='currency_converter'>
+      Select currencies:
       <button value='USD'>USD</button>
       <button value='EUR'>EUR</button>      
       <button value='CNY'>CNY</button>
-      <button value='RUB'>RUB</button></th>
+      <button value='RUB'>RUB</button>
+      </th>
+      <th></th>
+      <th><a href=#stats>Statistic</a></th>
     </tr>
     <tr>
       <th>Transaction ID</th>
