@@ -4,9 +4,9 @@ import cases from './cases'
 let count = 1
 
 const currency = (stats) => {
-    const rows = document.querySelectorAll('tbody>tr[id]')
     const buttons = document.querySelector('#currency_converter')
     buttons.addEventListener('click', (e) => {
+        const rows = document.querySelectorAll('tbody>tr[id]')
         if (e.target.nodeName !== 'BUTTON') { return }
         const currency = e.target.value
         const rate = exchange_rates[0].rates[currency]
