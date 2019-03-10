@@ -13,9 +13,9 @@ const sorter = (callback) => {
     const nothing = _.some(rows, ['cells.length', 1])
     const has_arrow = target.children.length > 0
     const card_num = col === 4
-    const stats = target.id === 'stats'
+    const other_row = target.parentNode.rowIndex !== 1
     const tag = target.nodeName !== 'TH'
-    if (nothing || has_arrow || card_num || stats || tag) return
+    if (nothing || has_arrow || card_num || other_row || tag) return
     //reset arrow for sorted th
     const activeTH = _.filter(theads, ['children.length', 1])
     _.map(activeTH, (item) => { item.lastChild.remove() })
